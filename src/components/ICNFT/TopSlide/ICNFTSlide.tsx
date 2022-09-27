@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 import styles from './ICNFTSlide.module.scss';
 
 const ICNFTSlide = () => {
   const SLIDE_NUMBER = 8;
+
+  const { t } = useTranslation('icnft');
 
   const slideData = [
     {
@@ -66,7 +69,6 @@ const ICNFTSlide = () => {
   const [selectedIdx, setSelectedIdx] = useState(0);
 
   const onWhiskerClickHandle = () => {
-    console.log('idx ==>', selectedIdx);
     setSelectedIdx((selectedIdx + 1) % SLIDE_NUMBER);
   }
 
@@ -85,17 +87,19 @@ const ICNFTSlide = () => {
                 fillRule="evenodd"
               />
             </svg>
-            <div className={styles.commentTxt} style={{ color: slideData[selectedIdx].textColor }}>Click on my whiskers</div>
+            <div className={styles.commentTxt} style={{ color: slideData[selectedIdx].textColor }}>
+              {t('clickWhisker')}
+            </div>
           </div>
           <img src={slideData[selectedIdx].catImg} className={styles.catImg} alt='CAT' />
           <div className={styles.whiskerClickable} onClick={onWhiskerClickHandle}></div>
         </div>
-        <p className={styles.slideTitle} style={{ color: slideData[selectedIdx].textColor }}>THE REDCAT MULTIVERSE</p>
+        <p className={styles.slideTitle} style={{ color: slideData[selectedIdx].textColor }}>{t('redCatMultiverse')}</p>
         <p className={styles.slideDescription} style={{ color: slideData[selectedIdx].textColor }}>
-          Inception NFTs are like nothing you&apos;ve ever seen before.
+          {t('multiverseText1')}
         </p>
         <p className={styles.slideDescription} style={{ color: slideData[selectedIdx].textColor }}>
-          They come jam-packed with in-game assets and actually multiply into six (or more) NFTs that you get to choose when you begin gameplay.
+          {t('multiverseText2')}
         </p>
         <a
           className={styles.fellowShipBtn}

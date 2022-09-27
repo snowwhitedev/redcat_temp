@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import { useTheme } from 'next-themes'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import styles from '../src/styles/icnft.module.scss'
 import ICNFTSlide from '../src/components/ICNFT/TopSlide/ICNFTSlide'
 import ICNFTRarityCard from '../src/components/ICNFT/ICNFTRarityCard'
@@ -10,64 +11,23 @@ import ICNFTBuiltStatus from '../src/components/ICNFT/ICNFTBuiltStatus'
 import ICNFTFAQ from '../src/components/ICNFT/ICNFTFAQ'
 
 const ICNFT: NextPage = () => {
-  const { theme, systemTheme } = useTheme()
-  const currentTheme = theme === "system" ? systemTheme : theme
+  const { t } = useTranslation('icnft');
+
   const rarityData = {
     essential: {
-      category: 'essential',
-      available: '6222 Available',
-      character: [
-        '3 Common',
-        '3 Uncommon'
-      ],
-      playCard: [
-        '2 Common',
-        '1 Uncommon'
-      ],
-      inGame: [
-        '30 Common',
-        '30 Uncommon (random)'
-      ]
+      character: [0, 1],
+      playCard: [0, 1],
+      inGame: [0, 1]
     },
     rare: {
-      category: 'rare',
-      available: '1778 Available',
-      character: [
-        '2 Common',
-        '2 Uncommon',
-        '2 Rare'
-      ],
-      playCard: [
-        '1 Common',
-        '1 Uncommon',
-        '1 Rare'
-      ],
-      inGame: [
-        '30 Common',
-        '20 Uncommon',
-        '10 Rare'
-      ]
+      character: [0, 1, 2],
+      playCard: [0, 1, 2],
+      inGame: [0, 1, 2]
     },
     legendary: {
-      category: 'legendary',
-      available: '888 Available',
-      character: [
-        '1 Common',
-        '2 Uncommon',
-        '2 Rare',
-        '1 Legendary'
-      ],
-      playCard: [
-        '1 Common',
-        '2 Uncommon',
-        '1 Legendary'
-      ],
-      inGame: [
-        '40 Common',
-        '20 Uncommon',
-        '10 Rare (random)',
-        '5 Legendary (random)'
-      ]
+      character: [0, 1, 2, 3],
+      playCard: [0, 1, 2],
+      inGame: [0, 1, 2, 3]
     }
   }
 
@@ -76,14 +36,12 @@ const ICNFT: NextPage = () => {
       <ICNFTSlide />
       <div className={styles.collectionAdvertSection}>
         <p className={styles.collectionAdvertTitle}>
-          A collection built with utility & community at the foundation
+          {t('collectionAdvertTitle')}
         </p>
         <p className={styles.collectionAdvertDescription}>
-          Each Inception NFT is a collection of in-game assets, and each type of icNFT will provide you with different levels of rarity for those resources. Remember two things: both characters and play cards are NFTs and both will be chosen by you at the launch.
+          {t('collectionAdvertDescription')}
         </p>
-        <div className={styles.collectionAdvertComment}>
-          If you&apos; ve got your eye on a Rare or Legendary icNFT, you might want to arrive to the party early.
-        </div>
+        <div className={styles.collectionAdvertComment}>{t('collectionAdvertComment')}</div>
       </div>
       <div className={styles.raritySection}>
         <div className={styles.rarityCardWrapper}>
@@ -104,5 +62,11 @@ const ICNFT: NextPage = () => {
     </div>
   )
 }
+
+export const getServerSideProps = async ({ locale }: any) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common', 'icnft'])
+  }
+});
 
 export default ICNFT;

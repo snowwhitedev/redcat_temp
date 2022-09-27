@@ -71,6 +71,8 @@
 
   &.essential {
     background: url('/images/inception/rarity_cat_essential.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .catBanner {
       background: #e83324;
@@ -79,6 +81,8 @@
 
   &.rare {
     background: url('/images/inception/rarity_cat_rare.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .catBanner {
       background: linear-gradient(to top, #e83324, #7693f0, #7693f0);
@@ -87,6 +91,8 @@
 
   &.legendary {
     background: url('/images/inception/rarity_cat_legendary.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .catBanner {
       background: linear-gradient(to bottom, #7494f3 -10%, #f2957c 40%, #e83324 90%);

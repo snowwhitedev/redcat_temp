@@ -19,6 +19,7 @@
 .builtContent {
   display: flex;
   margin-top: 60px;
+  align-items: flex-start;
 
   .builtItem {
     display: flex;
@@ -41,6 +42,7 @@
       letter-spacing: normal;
       text-align: center;
       color: var(--font-color);
+      margin-top: 10px;
     }
   }
 }
