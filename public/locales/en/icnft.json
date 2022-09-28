@@ -5,7 +5,7 @@
   "multiverseText2": "They come jam-packed with in-game assets and actually multiply into six (or more) NFTs that you get to choose when you begin gameplay.",
   "collectionAdvertTitle": "A collection built with utility & community at the foundation",
   "collectionAdvertDescription": "Each Inception NFT is a collection of in-game assets, and each type of icNFT will provide you with different levels of rarity for those resources. Remember two things: both characters and play cards are NFTs and both will be chosen by you at the launch.",
-  "collectionAdvertComment": "If you've got your eye on a Rare or Legendary icNFT, you might want to arrive to the party early.",
+  "collectionAdvertComment": "IF YOU'VE GOT YOUR EYE ON A RARE OR LEGENDARY icNFT, YOU MIGHT WANT TO ARRIVE TO THE PARTY EARLY.",
   "rarity": {
     "essential": {
       "category": "essential",
@@ -63,12 +63,12 @@
         "5 Legendary (random)"
       ]
     },
-    "characterNFT": "CHARACTER NTFs",
-    "playCardNFT": "PLAY CARD NTFs",
+    "characterNFT": "CHARACTER NFTs",
+    "playCardNFT": "PLAY CARD NFTs",
     "inGameItems": "IN-GAME ITEMS"
   },
   "ownerReward": {
-    "title": "All icNFT owners also receive:",
+    "title": "ALL icNFT OWNERS ALSO RECEIVE:",
     "iconBadge": "Limited edition badge",
     "iconAvatar": "Limited edition avatar",
     "iconTradingCard": "Limited edition trading card",

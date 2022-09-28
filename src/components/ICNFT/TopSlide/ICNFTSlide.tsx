@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import { useICNFTContext } from '../../../contexts/ICNFTContext';
 import styles from './ICNFTSlide.module.scss';
 
 const ICNFTSlide = () => {
   const SLIDE_NUMBER = 8;
 
   const { t } = useTranslation('icnft');
+  const { slideIdx, setSlideIdx } = useICNFTContext();
 
   const slideData = [
     {
@@ -69,6 +71,7 @@ const ICNFTSlide = () => {
   const [selectedIdx, setSelectedIdx] = useState(0);
 
   const onWhiskerClickHandle = () => {
+    setSlideIdx((selectedIdx + 1) % SLIDE_NUMBER);
     setSelectedIdx((selectedIdx + 1) % SLIDE_NUMBER);
   }
 

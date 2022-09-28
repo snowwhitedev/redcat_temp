@@ -1,6 +1,4 @@
-.container {
-  // margin-top: 60px;
-  padding-top: 120px;
+.icNFTContainer {
   margin-bottom: 150px;
 }
 
@@ -61,7 +59,6 @@
     letter-spacing: normal;
     text-align: center;
     color: #fff;
-    text-transform: uppercase;
     width: 100%;
     max-width: 888px;
     margin: 0 auto;
@@ -80,5 +77,45 @@
 
   &:last-child {
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .icNFTContainer {
+    margin-bottom: 60px;
+  }
+
+  .collectionAdvertSection {
+    padding: 50px 30px 50px 30px;
+
+    .collectionAdvertTitle {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .collectionAdvertDescription {
+      font-size: 13px;
+    }
+
+    .collectionAdvertComment {
+      font-size: 16px;
+    }
+  }
+
+  .raritySection {
+    flex-direction: column;
+    margin-top: 55px;
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .rarityCardWrapper {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 50px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

@@ -74,3 +74,22 @@
     color: var(--font-color);
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .icNFTRosterCard {
+    margin: 20px 0;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+    padding: 20px 30px;
+  }
+
+  .content {
+    padding: 30px 10px;
+
+    .rosterContent {
+      font-size: 13px;
+    }
+  }
+}

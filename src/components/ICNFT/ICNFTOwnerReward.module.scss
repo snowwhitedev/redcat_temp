@@ -94,12 +94,23 @@
   }
 }
 
+.multiverseGateContainer {
+  background: #1b1628;
+  width: 100%;
+  padding-top: 80px;
+}
+
 .multiverseGate {
   margin: 0 auto;
-  margin-top: 80px;
   width: fit-content;
   height: fit-content;
   position: relative;
+
+
+  img {
+    min-height: 592px;
+    object-fit: cover;
+  }
 
   .multiverseContent {
     max-width: 473px;
@@ -130,6 +141,65 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ownerReward {
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 80px;
+  }
+
+  .ownerRewardTitle {
+    max-width: 315px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .iconSection {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+
+    .iconItem {
+      margin-right: 0;
+      margin-top: 60px;
+    }
+  }
+
+  .icNFTRewardContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+
+    .rewardDescription {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .multiverseGate {
+
+
+    .multiverseContent {
+      width: 100%;
+      padding: 0 30px;
+
+      .multiverseTitle {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      .multiverseText {
+        font-size: 16px;
+        margin-bottom: 20px;
       }
     }
   }

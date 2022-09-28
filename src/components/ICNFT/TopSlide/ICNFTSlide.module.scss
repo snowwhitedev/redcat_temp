@@ -51,7 +51,8 @@
 .catImg {
   height: 350px;
   width: auto;
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-left: -30px;
 }
 
 .whiskerClickable {
@@ -100,4 +101,44 @@
   padding: 15px 40px;
   border-radius: 8px;
   color: #1b1628;
+}
+
+@media screen and (max-width: 1024px) {
+  .icNFTSlideItem {
+    min-height: unset;
+    padding-bottom: 60px;
+  }
+
+  .redCatLogo {
+    width: 156px;
+    height: auto;
+  }
+
+  .icNFTCatComment {
+    .commentWrapper {
+      width: 94px;
+      height: 76px;
+    }
+
+    .commentTxt {
+      font-size: 10px;
+    }
+  }
+
+  .catImg {
+    height: 240px;
+  }
+
+  .slideTitle {
+    display: none;
+  }
+
+  .slideDescription {
+    font-size: 13px;
+    max-width: 312px;
+  }
+
+  .fellowShipBtn {
+    font-size: 16px;
+  }
 }

@@ -23,3 +23,13 @@
   border-bottom: 2px solid transparent;
   padding: 50px 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .faqContainer {
+    margin-top: 40px;
+  }
+
+  .faqTitle {
+    font-size: 40px;
+  }
+}

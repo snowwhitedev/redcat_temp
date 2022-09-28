@@ -51,3 +51,31 @@
     font-weight: normal;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .icNFTMintingDetailContainer {
+    padding: 50px 30px;
+  }
+
+  .detailTitle {
+    font-size: 20px;
+  }
+
+  .mintingContent {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .contentItem {
+    margin-right: 0;
+    margin-top: 20px;
+
+    .itemName {
+      font-size: 18px;
+    }
+
+    .itemContent {
+      font-size: 16px;
+    }
+  }
+}

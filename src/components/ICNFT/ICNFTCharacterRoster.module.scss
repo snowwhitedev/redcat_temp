@@ -32,3 +32,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1024px) {
+  .characterRosterContainer {
+    padding: 0 40px;
+    margin-top: 50px;
+  }
+
+  .rosterTitle {
+    font-size: 20px;
+  }
+
+  .rosterText {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}

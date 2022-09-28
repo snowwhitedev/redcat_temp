@@ -70,7 +70,7 @@
   }
 
   &.essential {
-    background: url('/images/inception/rarity_cat_essential.png');
+    background: url('/images/inception/rarity_cat_essential.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -80,7 +80,7 @@
   }
 
   &.rare {
-    background: url('/images/inception/rarity_cat_rare.png');
+    background: url('/images/inception/rarity_cat_rare.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -90,7 +90,7 @@
   }
 
   &.legendary {
-    background: url('/images/inception/rarity_cat_legendary.png');
+    background: url('/images/inception/rarity_cat_legendary.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -254,5 +254,78 @@
     height: 214px;
     right: 0;
     bottom: 52px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .rarityCard {
+    width: 100%;
+    max-width: 380px;
+    height: unset;
+    padding-bottom: 80px;
+  }
+
+  .cardHeader {
+    .rarityCategory {
+      font-size: 32px;
+    }
+
+    .rarityCategoryNFT {
+      font-size: 20px;
+    }
+  }
+
+  .rarityCat {
+    width: 222px;
+    height: 222px;
+
+    .catBanner {
+      width: 50px;
+      height: 50px;
+      font-size: 10px;
+      top: -25px;
+      right: -25px;
+    }
+  }
+
+  .availableNumber {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  .cardContentItem {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.character,
+    &.card {
+      height: unset;
+    }
+
+    .content {
+      font-size: 15px;
+    }
+  }
+
+  .catImg {
+
+    &.essential {
+      width: auto;
+      height: 101px;
+    }
+
+    &.rare {
+      width: auto;
+      height: 114px;
+    }
+
+    &.legendary {
+      width: 85px;
+      height: auto;
+      bottom: 30px;
+    }
   }
 }
